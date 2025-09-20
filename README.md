@@ -1,2 +1,123 @@
-# porto-test
-porto testing
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Saya</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f3f4f6; }
+    header { background: #4f46e5; color: white; padding: 20px; text-align: center; }
+    main { padding: 20px; max-width: 700px; margin: auto; }
+    .card { background: white; padding: 20px; margin-top: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    footer { background: #111827; color: white; text-align: center; padding: 10px; margin-top: 30px; }
+    
+    /* Galeri Foto */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    .lightbox:target {
+      display: flex;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 40px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Halo, Saya Nasrullah</h1>
+    <p>Mahasiswa Prodi Bisnis Digital</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Tentang Saya</h2>
+      <p>Saya sedang kuliah di Universitas Muhammadiyah Sidenreng Rappang dan tertarik pada bisnis digital, teknologi, dan pemrograman.</p>
+    </section>
+
+    <section class="card">
+      <h2>Hobi</h2>
+      <ul>
+        <li>Belajar coding</li>
+        <li>Ngulik hardware laptop</li>
+        <li>Digital marketing</li>
+      </ul>
+
+      <!-- Galeri Foto -->
+      <div class="gallery">
+        <a href="#img1"><img src="Gambar WhatsApp 2025-03-10 pukul 14.29.38_d2c8ba3a.jpg" alt="Pemandangan langit 1"></a>
+        <a href="#img2"><img src="Gambar WhatsApp 2025-03-10 pukul 14.29.38_fc037dff.jpg" alt="Pemandangan langit 2"></a>
+        <a href="#img3"><img src="Gambar WhatsApp 2025-03-10 pukul 14.31.30_923e4bb2.jpg" alt="Pemandangan langit 3"></a>
+        <a href="#img4"><img src="Gambar WhatsApp 2025-09-20 pukul 16.52.23_6b44749b.jpg" alt="Laptop/Komputer"></a>
+      </div>
+
+      <!-- Lightbox Images -->
+      <div class="lightbox" id="img1">
+        <a href="#" class="close">&times;</a>
+        <img src="Gambar WhatsApp 2025-03-10 pukul 14.29.38_d2c8ba3a.jpg" alt="Pemandangan langit 1">
+      </div>
+      <div class="lightbox" id="img2">
+        <a href="#" class="close">&times;</a>
+        <img src="Gambar WhatsApp 2025-03-10 pukul 14.29.38_fc037dff.jpg" alt="Pemandangan langit 2">
+      </div>
+      <div class="lightbox" id="img3">
+        <a href="#" class="close">&times;</a>
+        <img src="Gambar WhatsApp 2025-03-10 pukul 14.31.30_923e4bb2.jpg" alt="Pemandangan langit 3">
+      </div>
+      <div class="lightbox" id="img4">
+        <a href="#" class="close">&times;</a>
+        <img src="Gambar WhatsApp 2025-09-20 pukul 16.52.23_6b44749b.jpg" alt="Laptop/Komputer">
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Kontak</h2>
+      <p>Email: dirlan1201@email.com</p>
+      <p>Instagram: @nsrullh____</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Nasrullah</p>
+  </footer>
+</body>
+</html>
